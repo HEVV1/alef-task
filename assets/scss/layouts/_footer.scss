@@ -1,0 +1,23 @@
+.layout-footer {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  .footer-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    .footer-content {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      .footer-wrapper-links {
+        ul {
+          li {
+            a {
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
