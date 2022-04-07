@@ -1,0 +1,8 @@
+.btn,
+.btn:link,
+.btn:visited {
+  padding-left: 2.8rem;
+  padding-right: 2.8rem;
+  transition: all $default_transition_time;
+  user-select: none;
+}

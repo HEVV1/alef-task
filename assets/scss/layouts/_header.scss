@@ -1,28 +1,79 @@
 .layout-header {
   width: 100%;
   height: 4rem;
-  box-shadow: 0px .2rem .4rem rgba($color: $color_black, $alpha: 0.1);
+  box-shadow: 0px 0.2rem 0.4rem rgba($color: $color_black, $alpha: 0.1);
+  margin-bottom: 3rem;
+  transition: ease-in-out $default_transition_time;
   .header-wrapper {
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .header-wrapper-logo {
+      transition: all $default_transition_time;
+    }
   }
-  .header-wrapper-links {
-    ul {
-      display: flex;
-      li {
-        &:not(:first-child) {
-          margin-left: 3.3rem;
+  .header-nav-menu-wrapper {
+    display: flex;
+    align-items: center;
+    .header-wrapper-links {
+      transition: all $default_transition_time;
+      ul {
+        display: flex;
+        li {
+          &:not(:first-child) {
+            margin-left: 3.3rem;
+          }
+          a:link,
+          a:visited {
+            display: flex;
+            align-items: center;
+            .icon-link {
+              width: 1.6rem;
+              height: 1.6rem;
+              min-width: 1.6rem;
+              min-height: 1.6rem;
+            }
+          }
         }
-        a {
-          display: flex;
-          align-items: center;
-          .icon-link {
-            width: 1.6rem;            
-            height: 1.6rem;
-            min-width: 1.6rem;
-            min-height: 1.6rem;
+      }
+    }
+  }
+  &.active {
+    .header-wrapper-logo {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .header-nav-menu-wrapper {
+      .header-wrapper-links {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+  &.hide-header{
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+/*Responsivness*/
+@include res("lg") {
+  .layout-header {
+    position: fixed;
+    top: 0;
+    height: 7rem;
+    box-shadow: unset;
+    margin-bottom: 0;
+    z-index: 1;
+    background-color: $color_white;
+    .header-nav-menu-wrapper {
+      .header-wrapper-links {
+        ul {
+          li {
+            &:not(:first-child) {
+              margin-left: 2rem;
+            }
           }
         }
       }

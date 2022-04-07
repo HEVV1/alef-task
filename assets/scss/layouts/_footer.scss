@@ -1,6 +1,7 @@
 .layout-footer {
   padding-top: 7rem;
   padding-bottom: 7rem;
+  margin-top: 5rem;
   .footer-wrapper {
     display: flex;
     justify-content: space-evenly;
@@ -10,12 +11,41 @@
       .footer-wrapper-links {
         ul {
           li {
-            a {
+            a:link,
+            a:visited {
               &:hover {
                 text-decoration: underline;
               }
             }
           }
+        }
+      }
+      .footer-wrapper-button {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 3.5rem;
+      }
+    }
+  }
+}
+
+/*Responsivness*/
+@include res("lg") {
+  .layout-footer {
+    .footer-wrapper {
+      flex-wrap: wrap;
+      justify-content: unset;
+      .footer-content {
+        &.content-links {
+          flex-basis: 50%;
+          flex-basis: 50%;          
+          margin-bottom: 2rem;          
+        }
+        &.content-email {
+          margin-top: 4rem;
+          flex-basis: 100%;
+          flex-basis: 100%;
+         
         }
       }
     }

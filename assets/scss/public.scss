@@ -15,12 +15,23 @@
 @import "base/utilities";
 // Components
 @import "components/input";
+@import "components/input_select";
+@import "components/button";
+@import "components/button_submit";
+@import "components/button_primary";
+@import "components/button_icon";
+@import "components/button_menu";
 // Blocks
-//..........//
+@import "blocks/product";
+@import "blocks/discount";
+@import "blocks/quantity";
+@import "blocks/text_icon";
+@import "blocks/gallery";
 // Layouts
 @import "layouts/header";
 @import "layouts/form";
 @import "layouts/footer";
+@import "layouts/menu";
 // Pages
 //..........//
 // Browser-specific overrides

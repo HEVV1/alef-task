@@ -1,0 +1,13 @@
+.btn-icon {
+  display: flex;
+  padding-left: 1.4rem !important;
+  padding-right: 1.4rem !important;
+  height: 4.4rem;
+  background-color: $color_black;
+  color: $color_white;
+  flex: 1 0 auto;
+  .icon{
+    max-width: 1.5rem;
+    min-width: 1.5rem;
+  }
+}

@@ -7,3 +7,40 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+/*Text positioning*/
+.text-center{
+  text-align: center;
+}
+
+/*Margin Top*/
+.mt-10 {
+  margin-top: 1rem;
+}
+.mt-20 {
+  margin-top: 2rem;
+}
+.mt-30 {
+  margin-top: 3rem;
+}
+.mt-40 {
+  margin-top: 4rem;
+}
+/*Margin Bop*/
+.mb-10 {
+  margin-bottom: 1rem;
+}
+.mb-20 {
+  margin-bottom: 2rem;
+}
+.mb-30 {
+  margin-bottom: 3rem;
+}
+.mb-40 {
+  margin-bottom: 4rem;
+}
+
+/*Text decoration*/
+.underline {
+  text-decoration: underline;
+}

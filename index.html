@@ -5,12 +5,34 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Alef Project</title>
   <link rel="stylesheet" href="./assets/dist/css/public.css">
 </head>
 
 <body>
   <div class="wrapper-page">
+    <div class="layout-menu">
+      <div class="container">
+        <div class="menu-wrapper">
+          <nav>
+            <ul>
+              <li>
+                <a href="#">Постельное белье</a>
+              </li>
+              <li>
+                <a href="#">одежда для дома</a>
+              </li>
+              <li>
+                <a href="#">Одежда для улицы</a>
+              </li>
+              <li>
+                <a href="#">ВЫход</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
     <div class="wrapper-page-header-and-content">
       <header class="layout-header">
         <div class="container">
@@ -20,36 +42,314 @@
                 <h1 class="styled-as-h1">Logo</h1>
               </a>
             </div>
-            <nav class="header-wrapper-links">
-              <ul>
-                <li>
-                  <a href="#">
-                    <img class="icon-link" src="./assets/images/icons/ic_user.svg" alt="">
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img class="icon-link" src="./assets/images/icons/ic_heart.svg" alt="">
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img class="icon-link" src="./assets/images/icons/ic_basket.svg" alt="">
-                  </a>
-                </li>
-              </ul>
-            </nav>
+            <div class="header-nav-menu-wrapper">
+              <nav class="header-wrapper-links">
+                <ul>
+                  <li>
+                    <a href="#">
+                      <img class="icon-link" src="./assets/images/icons/ic_user.svg" alt="">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img class="icon-link" src="./assets/images/icons/ic_heart.svg" alt="">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img class="icon-link" src="./assets/images/icons/ic_basket.svg" alt="">
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="btn-menu">
+                <div class="lines"></div>
+              </div>
+            </div>
           </div>
         </div>
       </header>
       <div class="wrapper-page-content">
-
+        <section class="block-product">
+          <div class="container">
+            <div class="product-wrapper">
+              <div id="app" class="product-wrapper-image">
+                <div class="image product-desktop-image" v-bind:style="{ backgroundImage: 'url(' + image.src + ')' }"></div>
+                <img class="image  product-mobile-image" v-if="image" :key="image.id" :src="image.src" alt="image.alt">
+                <div class="product-sub-image-wrapper">
+                  <div @click="switchImage" ref="productSubImage" id="0" style="background-image: url(./assets/images/img_1.jpg);" class="product-sub-image">
+                  </div>
+                  <div @click="switchImage" ref="productSubImage" id="1" style="background-image: url(./assets/images/img_6.jpg);" class="product-sub-image">
+                  </div>
+                  <div @click="switchImage" ref="productSubImage" id="2" style="background-image: url(./assets/images/img_7.jpg);" class="product-sub-image">
+                  </div>
+                  <div @click="switchImage" ref="productSubImage" id="3" style="background-image: url(./assets/images/img_8.jpg);" class="product-sub-image">
+                  </div>
+                  <div @click="switchImage" ref="productSubImage" id="4" style="background-image: url(./assets/images/img_9.jpg);" class="product-sub-image">
+                  </div>
+                </div>
+              </div>
+              <div class="product-data">
+                <div class="product-data-text-wrapper">
+                  <span class="product-text-header">Пижама для девочек</span>
+                </div>
+                <div class="product-data-text-wrapper">
+                  <span class="product-number-text">
+                    Арт. 02765/46
+                  </span>
+                </div>
+                <div class="product-review">
+                  <div class="product-review-text-wrapper">
+                    <span>Отзывы</span>
+                  </div>
+                  <div class="product-review-star-wrapper">
+                    <img class="icon" src="./assets/images/icons/ic_star_full.svg" alt="">
+                    <img class="icon" src="./assets/images/icons/ic_star_full.svg" alt="">
+                    <img class="icon" src="./assets/images/icons/ic_star_full.svg" alt="">
+                    <img class="icon" src="./assets/images/icons/ic_star_full.svg" alt="">
+                    <img class="icon" src="./assets/images/icons/ic_star_empty.svg" alt="">
+                  </div>
+                  <div class="product-review-text-wrapper">
+                    <span>14</span>
+                    <span>Отзывов</span>
+                  </div>
+                  <div class="product-review-icon-wrapper">
+                    <a href="#">
+                      <img class="icon" src="./assets/images/icons/ic_chevron_right.svg" alt="">
+                    </a>
+                  </div>
+                </div>
+                <div class="product-price">
+                  <div class="product-current-price">
+                    <span class="price-text">800</span>
+                    <span class="price-text">&#x20BD;</span>
+                  </div>
+                  <div class="product-discounted-price">
+                    <span class="price-text">1500</span>
+                    <span class="price-text">&#x20BD;</span>
+                  </div>
+                  <div class="product-review-icon-wrapper">
+                    <a href="#">
+                      <img class="icon" src="./assets/images/icons/ic_chevron_right.svg" alt="">
+                    </a>
+                  </div>
+                </div>
+                <div class="block-discount">
+                  <span>скидка -36%</span>
+                </div>
+                <div class="block-discount">
+                  <span>акция -20%</span>
+                </div>
+                <form class="layout-form">
+                  <div class="block-select mt-30">
+                    <div class="form-group">
+                      <select class="form-control" name="select_size" id="select_size">
+                        <option value="" selected="">Выбрать размер</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="XXL">XXL</option>
+                      </select>
+                    </div>
+                    <div class="select-wrapper-icon">
+                      <img class="icon" src="./assets/images/icons/ic_chevron_down.svg" alt="">
+                    </div>
+                  </div>
+                  <div class="product-wrapper-text mt-10">
+                    <a href="#">
+                      <span class="underline">Определить размер</span>
+                    </a>
+                  </div>
+                  <div class="product-buy-wrapper mt-40">
+                    <div class="product-wrapper-quantity product-wrapped-element">
+                      <div id="counter" class="block-quantity">
+                        <button  type="button" v-on:click='increment' class="quantity-wrapper-text operator">
+                          <span class="quantity-text">+</span>
+                        </button>
+                        <div class="quantity-wrapper-text amount">
+                          <span class="quantity-text total-amount">{{counter}}</span>
+                          <input type="hidden" value="1" id="quantity-text" class="form-control" name="quantity-text">
+                        </div>
+                        <button type="button" v-on:click='decrement' class="quantity-wrapper-text operator">
+                          <span class="quantity-text">-</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="product-wrapper-buttons">
+                      <div class="product-wrapper-button product-wrapped-element">
+                        <button type="button" class="btn btn-primary buy">Добавить в корзину</button>
+                      </div>
+                      <div class="product-wrapper-button product-wrapped-element">
+                        <a href="#" class="btn btn-icon">
+                          <img class="icon" src="./assets/images/icons/ic_heart_white.svg" alt="">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <div class="product-wrapper-text mt-10">
+                  <a href="#">
+                    <span class="underline">Купить в 1 клик</span>
+                  </a>
+                </div>
+                <hr class="product-separator mt-30">
+                <div class="block-text-icon icon-product">
+                  <a href="#">Описание товара</a>
+                </div>
+                <div class="block-text-icon icon-time">
+                  <a href="#">Доставка и возврат</a>
+                </div>
+                <div class="block-text-icon icon-card">
+                  <a href="#">Способы оплаты</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="container">
+          <div class="wrapper-text mb-20 mt-20 text-center">
+            <a href="#">
+              <span class="underline">Определить размер</span>
+            </a>
+          </div>
+        </div>
+        <section class="block-gallery">
+          <div class="container">
+            <div class="gallery-wrapper">
+              <div class="gallery-left">
+                <div class="gallery-wrapper-image">
+                  <img class="image" src="./assets/images/img_6.jpg" alt="">
+                  <div class="gallery-image-overaly">
+                    <div class="gallery-image-overlay-wrapper">
+                      <div class="icon-wrapper icon-view">
+                        <a href="#">
+                          <img src="./assets/images/icons/ic_view.svg" alt="">
+                        </a>
+                      </div>
+                      <div class="icon-wrapper icon-find-out">
+                        <a href="#">
+                          <img src="./assets/images/icons/ic_basket_white.svg" alt="">
+                          <span class="gallery-overlay-text">Узнай, что на мне</span>
+                        </a>
+                      </div>
+                      <div class="icon-wrapper icon-likes">
+                        <a href="#">
+                          <img src="./assets/images/icons/ic_heart_full_white.svg" alt="">
+                          <span class="gallery-overlay-text">200</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="gallery-right">
+                <div class="gallery-wrapper-image">
+                  <img class="image" src="./assets/images/img_7.jpg" alt="">
+                  <div class="gallery-image-overaly">
+                    <div class="gallery-image-overlay-wrapper">
+                      <div class="icon-wrapper icon-view">
+                        <a href="#">
+                          <img src="./assets/images/icons/ic_view.svg" alt="">
+                        </a>
+                      </div>
+                      <div class="icon-wrapper icon-find-out">
+                        <a href="#">
+                          <img src="./assets/images/icons/ic_basket_white.svg" alt="">
+                          <span class="gallery-overlay-text">Узнай, что на мне</span>
+                        </a>
+                      </div>
+                      <div class="icon-wrapper icon-likes">
+                        <a href="#">
+                          <img src="./assets/images/icons/ic_heart_full_white.svg" alt="">
+                          <span class="gallery-overlay-text">200</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="gallery-wrapper-image">
+                  <img class="image" src="./assets/images/img_8.jpg" alt="">
+                  <div class="gallery-image-overaly">
+                    <div class="gallery-image-overlay-wrapper">
+                      <div class="icon-wrapper icon-view">
+                        <a href="#">
+                          <img src="./assets/images/icons/ic_view.svg" alt="">
+                        </a>
+                      </div>
+                      <div class="icon-wrapper icon-find-out">
+                        <a href="#">
+                          <img src="./assets/images/icons/ic_basket_white.svg" alt="">
+                          <span class="gallery-overlay-text">Узнай, что на мне</span>
+                        </a>
+                      </div>
+                      <div class="icon-wrapper icon-likes">
+                        <a href="#">
+                          <img src="./assets/images/icons/ic_heart_full_white.svg" alt="">
+                          <span class="gallery-overlay-text">200</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="gallery-wrapper-image">
+                  <img class="image" src="./assets/images/img_9.jpg" alt="">
+                  <div class="gallery-image-overaly">
+                    <div class="gallery-image-overlay-wrapper">
+                      <div class="icon-wrapper icon-view">
+                        <a href="#">
+                          <img src="./assets/images/icons/ic_view.svg" alt="">
+                        </a>
+                      </div>
+                      <div class="icon-wrapper icon-find-out">
+                        <a href="#">
+                          <img src="./assets/images/icons/ic_basket_white.svg" alt="">
+                          <span class="gallery-overlay-text">Узнай, что на мне</span>
+                        </a>
+                      </div>
+                      <div class="icon-wrapper icon-likes">
+                        <a href="#">
+                          <img src="./assets/images/icons/ic_heart_full_white.svg" alt="">
+                          <span class="gallery-overlay-text">200</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="gallery-wrapper-image">
+                  <img class="image" src="./assets/images/img_10.jpg" alt="">
+                  <div class="gallery-image-overaly">
+                    <div class="gallery-image-overlay-wrapper">
+                      <div class="icon-wrapper icon-view">
+                        <a href="#">
+                          <img src="./assets/images/icons/ic_view.svg" alt="">
+                        </a>
+                      </div>
+                      <div class="icon-wrapper icon-find-out">
+                        <a href="#">
+                          <img src="./assets/images/icons/ic_basket_white.svg" alt="">
+                          <span class="gallery-overlay-text">Узнай, что на мне</span>
+                        </a>
+                      </div>
+                      <div class="icon-wrapper icon-likes">
+                        <a href="#">
+                          <img src="./assets/images/icons/ic_heart_full_white.svg" alt="">
+                          <span class="gallery-overlay-text">200</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
     <footer class="layout-footer">
       <div class="container">
         <div class="footer-wrapper">
-          <div class="footer-content">
+          <div class="footer-content content-links">
             <h5 class="styled-as-h5">Покупателям</h5>
             <div class="footer-wrapper-links">
               <ul>
@@ -65,28 +365,38 @@
               </ul>
             </div>
           </div>
-          <div class="footer-content">
-            <h5 class="styled-as-h5">Покупателям</h5>
+          <div class="footer-content content-links">
+            <h5 class="styled-as-h5">о нас</h5>
             <div class="footer-wrapper-links">
               <ul>
                 <li>
-                  <a href="#">Каталог</a>
+                  <a href="#">О компании</a>
                 </li>
                 <li>
-                  <a href="#">Акции</a>
+                  <a href="#">Новости</a>
                 </li>
                 <li>
-                  <a href="#">Бренды</a>
+                  <a href="#">Команда</a>
                 </li>
               </ul>
             </div>
           </div>
-          <div class="footer-content">
-            <form class="form-layout">
-              <h5 class="styled-as-h5">Узнайте первыми о новинках и акциях</h5>
-              <div class="form-group">
-                <input type="text" id="email" placeholder="Адрес электронной почты" class="form-control" name="email">
-                <label for="email"></label>
+          <div class="footer-content content-email">
+            <h5 class="styled-as-h5">Узнайте первыми о новинках и акциях</h5>
+            <form class="layout-form" js-validate>
+              <div class="block-input">
+                <div class="form-group">
+                  <input type="text" id="email" placeholder="Адрес электронной почты" class="form-control" name="email"
+                    js-frontend-validation-type="email">
+                  <label for="email" js-validate></label>
+                </div>
+                <div class="input-cancel">
+                  <div class="line line-1"></div>
+                  <div class="line line-2"></div>
+                </div>
+              </div>
+              <div class="footer-wrapper-button">
+                <button class="btn btn-submit">Подписаться</button>
               </div>
             </form>
           </div>
@@ -94,7 +404,22 @@
       </div>
     </footer>
   </div>
+  <script>
+    window['globalFormErrorList'] = {
+      'email': 'e-mail is incorrect'
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="./assets/fake_node_modules/jquery/jquery.min.js"></script>
+  <script src="./assets/js/helpers/input_validation.js"></script>
+  <script src="./assets/js/helpers/form_validation.js"></script>
+  <script src="./assets/js/helpers/scroll_utils.js"></script>
+  <script src="./assets/js/modules/clear_input.js"></script>
+  <script src="./assets/js/modules/menu.js"></script>
+  <script src="./assets/js/modules/header.js"></script>
+  <script src="./assets/js/modules/buy.js"></script>
+  <script src="./assets/js/modules/vue_images.js"></script>
+  <script src="./assets/js/modules/vue_count.js"></script>
 </body>
-<script src="./assets/fake_node_modules/jquery/jquery.min.js"></script>
 
 </html>

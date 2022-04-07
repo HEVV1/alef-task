@@ -1,0 +1,56 @@
+.btn-menu {
+  display: none;
+  position: relative;
+  height: 1.5rem;
+  width: 1.8rem;
+  margin-left: 2rem;
+  z-index: 3;
+  cursor: pointer;
+  .lines {
+    &,
+    &::before,
+    &::after {
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      width: 1.8rem;
+      height: 0.1rem;
+      background-color: $color_black;
+      transition: all $default_transition_time;
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+    }
+    &::before {
+      top: -0.6rem;
+    }
+    &::after {
+      top: 0.4em;
+    }
+  }
+  &.active{
+    .lines{
+      &{
+        background-color: transparent;
+      }
+      &::before{
+        top: 0;
+        transform: rotateZ(-45deg);
+      }
+      &::after{
+        top: 0;
+        transform: rotateZ(45deg);
+      }
+    }
+  }
+}
+
+
+/*Responsivness*/
+@include res("lg") {
+  .btn-menu{
+    display: inline-block;
+  }
+}

@@ -1,0 +1,23 @@
+.block-quantity {
+  display: inline-block;
+  background-color: $color_light_grey;
+  display: inline-flex;
+  height: 4.4rem;
+  .quantity-wrapper-text{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &.operator{     
+      width: 5.2rem;
+      cursor: pointer;
+    }
+    &.amount{
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+    span{
+      user-select: none;      
+    }
+  }
+
+}

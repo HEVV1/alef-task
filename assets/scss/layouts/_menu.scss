@@ -1,0 +1,31 @@
+.layout-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $color_white;
+  z-index: 1;
+  transform: translateY(-100%);
+  transition: all $default_transition_time;
+  .menu-wrapper {
+    margin-top: 8rem;
+    margin-bottom: 4rem;
+    nav {
+      ul {
+        li {
+          margin-top: 1.5rem;
+          margin-bottom: 1.5rem;
+          a {
+            text-transform: uppercase;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.active {
+    transform: translateY(0);
+  }
+}
