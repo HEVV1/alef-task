@@ -7,7 +7,7 @@ var app = new Vue({
       images: [
         {
           id: 0,
-          src: "./assets/images/img_1.jpg",          
+          src: "./assets/images/img_10.jpg",          
           alt: ""
         },
         {
